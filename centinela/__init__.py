@@ -20,4 +20,18 @@ Módulos:
 - ``verificar``: verificación exhaustiva de admisibilidad y consistencia.
 """
 
+import sys
+
 __version__ = "1.0.0"
+
+
+def configurar_salida_utf8() -> None:
+    """Fuerza UTF-8 en la salida estándar para imprimir tildes y eñes.
+
+    En Windows, cuando la salida se redirige a un archivo o a una tubería,
+    Python usa la página de códigos local; esta función la cambia a UTF-8
+    para que los informes se lean igual en cualquier terminal.
+    """
+    for flujo in (sys.stdout, sys.stderr):
+        if hasattr(flujo, "reconfigure"):
+            flujo.reconfigure(encoding="utf-8")

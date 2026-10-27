@@ -29,6 +29,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import NamedTuple
 
+from .busqueda import Problema
+
 #: Índice del servidor web (nginx).
 WEB = 0
 #: Índice del servidor de aplicación.
@@ -208,7 +210,7 @@ def aplicar(estado: Estado, accion: Accion) -> Estado:
     raise ValueError(f"Acción desconocida: {tipo}")
 
 
-class ProblemaCentinela:
+class ProblemaCentinela(Problema):
     """Problema de búsqueda de Centinela con la interfaz de AIMA.
 
     Expone ``estado_inicial``, ``acciones(s)``, ``resultado(s, a)``,
@@ -220,7 +222,7 @@ class ProblemaCentinela:
     """
 
     def __init__(self, estado_inicial: Estado):
-        self.estado_inicial = estado_inicial
+        super().__init__(estado_inicial)
 
     def acciones(self, estado: Estado) -> list[Accion]:
         """Acciones aplicables en ``estado``, en orden determinista."""
