@@ -186,6 +186,9 @@ def bfs(problema: Problema) -> ResultadoBusqueda:
             if hijo.estado in explorados or hijo.estado in en_frontera:
                 continue
             if problema.es_meta(hijo.estado):
+                max_frontera = max(max_frontera, len(frontera))
+                max_memoria = max(max_memoria,
+                                  len(frontera) + len(explorados))
                 return ResultadoBusqueda("BFS", hijo, expandidos, generados,
                                          max_frontera, max_memoria)
             frontera.append(hijo)
