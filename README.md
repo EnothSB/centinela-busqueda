@@ -5,6 +5,14 @@ búsqueda en anchura (BFS), búsqueda en profundidad (DFS) y A* sobre una
 abstracción del problema de **Centinela**, el agente de la Fase 1, usando
 solo la biblioteca estándar de Python.
 
+| | |
+|---|---|
+| **Autor** | Enoth Salcedo Blandon (código 200632) |
+| **Universidad** | Universidad Militar Nueva Granada, Facultad de Estudios a Distancia, Programa de Ingeniería |
+| **Asignatura** | Inteligencia Artificial, Fase 2 del Proyecto Integrador |
+| **Docente** | John Edwin Vera Vera |
+| **Fecha** | Octubre de 2026 |
+
 ## Relación con la Fase 1
 
 En la Fase 1, Centinela se definió como un agente basado en utilidad que

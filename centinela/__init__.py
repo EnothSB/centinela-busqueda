@@ -18,10 +18,14 @@ Módulos:
 - ``busqueda``: nodos, BFS, DFS, A*, UCS y métricas.
 - ``benchmark``: comparación experimental de los algoritmos.
 - ``verificar``: verificación exhaustiva de admisibilidad y consistencia.
+
+Autor: Enoth Salcedo Blandon (código 200632), Universidad Militar Nueva
+Granada, Inteligencia Artificial, Fase 2 del Proyecto Integrador.
 """
 
 import sys
 
+__author__ = "Enoth Salcedo Blandon"
 __version__ = "1.0.0"
 
 
